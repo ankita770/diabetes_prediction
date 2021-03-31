@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Diabetes Prediction</title>
+    </head>
+    <body>
+        <form method="post" action="{{url_for('predict')}}">
+            Pregnencies <input type="text" name="prg"/>
+            <br>
+            Glucose <input type="text" name="glc"/>
+            <br>
+            Blood Presure <input type="text" name="bp"/>
+            <br>
+            Skin Color <input type="text" name="ski"/>
+            <br>
+            Insulin <input type="text" name="ins"/>
+            <br>
+            BMI <input type="text" name="bmi"/>
+            <br>
+            Pedigree Function <input type="text" name="ped"/>
+            <br>
+            Age <input type="text" name="age"/>
+            <br>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        <br>
+        <b>{{prediction_text}}</b>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Diabetes Prediction</title>
+        <style>
+            body{
+                background-image: url("{{ url_for('static', filename='images (15).jpg') }}");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+            .frm{
+                background-image: url("{{ url_for('static', filename='images (2).jpg') }}");
+                background-repeat: no-repeat;
+                background-size: 80% 100%;
+                margin-top: 50px;
+                margin-left: 700px;
+                
+            }
+            .con{
+                padding-left: 30px;
+            }
+            input{
+                background-color:paleturquoise;
+            }
+            input:hover{
+                background-color: powderblue;
+            }
+            button{
+                border-radius: 30px;
+                width: 100px;
+                height: 30px;
+                background-color:yellowgreen;
+            }
+            button:hover{
+                background-color:lightseagreen
+            }
+        </style>
+    </head>
+    
+    <body id="bdy">
+        <form class="frm" method="post" action="{{url_for('predict')}}">
+            <br>
+            <div class="con">
+            <h4>Pregnencies <input type="text" name="prg"/>
+            <br>
+            <br>
+            Glucose <input type="text" name="glc"/>
+            <br>
+            <br>
+            Blood Presure <input type="text" name="bp"/>
+            <br>
+            <br>
+            Skin Color <input type="text" name="skt"/>
+            <br>
+            <br>
+            Insulin <input type="text" name="ins"/>
+            <br>
+            <br>
+            BMI <input type="text" name="bmi"/>
+            <br>
+            <br>
+            Pedigree Function <input type="text" name="ped"/>
+            <br>
+            <br>
+            Age <input type="text" name="age"/>
+            <br>
+            <br>
+            <button type="submit" class="btn">Predict</button>
+            <br>
+            <br>
+            <h3><b>{{prediction_text}}</b></h3>
+            <br>
+            </h4>
+            </div>
+        </form>
+        <br>
+        
+    </body>
+</html>
